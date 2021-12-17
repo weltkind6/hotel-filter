@@ -1,14 +1,18 @@
 import React from 'react'
 import './App.css';
-import Option from "./UI/Option";
+import Example from "./index";
+import Reviews from "./Components/Reviews/Reviews";
+import Like from "./Icons/Icons";
 
 function App() {
 
 
     return (
         <div className="App">
-            <h1>Hotel yo</h1>
-            <Option/>
+            <h3>Количество звёзд</h3>
+            <Example />
+            <Reviews />
+            <Like />
         </div>
     );
 }

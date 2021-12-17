@@ -1,12 +1,7 @@
 export const colourOptions = [
-    { value: "ocean", label: "Ocean", color: "#00B8D9" },
-    { value: "blue", label: "Blue", color: "#0052CC" },
-    { value: "purple", label: "Purple", color: "#5243AA" },
-    { value: "red", label: "Red", color: "#FF5630" },
-    { value: "orange", label: "Orange", color: "#FF8B00" },
-    { value: "yellow", label: "Yellow", color: "#FFC400" },
-    { value: "green", label: "Green", color: "#36B37E" },
-    { value: "forest", label: "Forest", color: "#00875A" },
-    { value: "slate", label: "Slate", color: "#253858" },
-    { value: "silver", label: "Silver", color: "#666666" }
+    {value: "one", label: "1 звёзда", color: "#00BB6D"},
+    {value: "two", label: "2 звёзды", color: "#00BB6D"},
+    {value: "three", label: "3 звёзды", color: "#5243AA"},
+    {value: "four", label: "4 звезды", color: "#FF5630"},
+    {value: "five", label: "5 звёзд", color: "#FF8B00"},
 ];

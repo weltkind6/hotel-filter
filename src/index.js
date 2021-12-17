@@ -7,6 +7,7 @@ import makeAnimated from "react-select/animated";
 import {components} from "react-select";
 import {colourOptions} from "./UI/data";
 import MySelect from "./UI/MySelect";
+import App from "./App";
 
 const Option = props => {
     return (
@@ -62,6 +63,6 @@ export default class Example extends Component {
 }
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<Example/>, rootElement);
+ReactDOM.render(<App/>, rootElement);
 
 reportWebVitals();
