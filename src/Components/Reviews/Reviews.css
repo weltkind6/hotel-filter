@@ -7,6 +7,18 @@
 }
 .reviews-rate {
     display: flex;
-    justify-content: space-between;
     margin: 1em 0;
+}
+.booking-block {
+    display: flex;
+    justify-content: space-between;
+}
+.btn-secondary {
+    background: #6A53F5;
+    opacity: .1;
+}
+.btn-secondary:hover {
+    background: rgba(0, 187, 109, 1);
+    opacity: 1;
+    border: none;
 }
