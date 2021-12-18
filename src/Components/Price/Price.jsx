@@ -1,6 +1,7 @@
 import React from 'react';
 import './Price.css'
 import {Line} from "../../Icons/Icons";
+export
 
 const Price = () => {
     return (
