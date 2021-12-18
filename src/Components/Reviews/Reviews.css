@@ -1,0 +1,12 @@
+.reviews__wrapper {
+    max-width: 800px;
+    width: 100%;
+    padding: 1em;
+    border: 1px solid rgba(234, 234, 234, 1);
+    border-radius: 15px;
+}
+.reviews-rate {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0;
+}

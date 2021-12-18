@@ -6,11 +6,11 @@ import {AiOutlineLine} from "react-icons/ai";
 const Like = () => {
     return (
         <div>
-            <ImStarFull style={{color: 'gold', fontSize: '50px'}}/>
-            <ImStarFull style={{color: 'gold', fontSize: '50px'}}/>
-            <ImStarFull style={{color: 'gold', fontSize: '50px'}}/>
-            <ImStarFull style={{color: 'gold', fontSize: '50px'}}/>
-            <ImStarFull style={{color: 'gold', fontSize: '50px'}}/>
+            <ImStarFull style={{color: 'gold', fontSize: '25px'}}/>
+            <ImStarFull style={{color: 'gold', fontSize: '25px'}}/>
+            <ImStarFull style={{color: 'gold', fontSize: '25px'}}/>
+            <ImStarFull style={{color: 'gold', fontSize: '25px'}}/>
+            <ImStarFull style={{color: 'gold', fontSize: '25px'}}/>
         </div>
     )
 }
