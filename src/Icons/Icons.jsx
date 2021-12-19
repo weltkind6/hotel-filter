@@ -3,19 +3,23 @@ import {ImStarFull} from "react-icons/im";
 import {AiOutlineLine} from "react-icons/ai";
 
 
-const Like = () => {
+const Star = () => {
     return (
         <div>
-            <ImStarFull style={{color: 'gold', fontSize: '25px'}}/>
-            <ImStarFull style={{color: 'gold', fontSize: '25px'}}/>
-            <ImStarFull style={{color: 'gold', fontSize: '25px'}}/>
-            <ImStarFull style={{color: 'gold', fontSize: '25px'}}/>
-            <ImStarFull style={{color: 'gold', fontSize: '25px'}}/>
+            <ImStarFull style={{color: 'gold', fontSize: '25px', marginRight: '5px'}}/>
         </div>
     )
 }
 
-export default Like;
+export const StarEmpty = () => {
+    return (
+        <div>
+            <ImStarFull style={{color: 'gray', fontSize: '25px', marginRight: '5px'}}/>
+        </div>
+    )
+}
+
+export default Star;
 
 
 export const Line = () => {
