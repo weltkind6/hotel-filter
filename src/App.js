@@ -14,8 +14,7 @@ function App() {
 
 
     const filterHandler = () => {
-        setCountFilter(([...countFilter].filter(el => el.count >= Number(countInput))))
-        setCountFilter([...countFilter].filter(el => el.price >= Number(priceInput)))
+        setCountFilter([...countFilter].filter(el => el.price >= Number(priceInput) && el.count >= Number(countInput)))
     }
 
 
