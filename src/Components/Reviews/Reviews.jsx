@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Reviews.css'
 import Star, {StarEmpty} from "../../Icons/Icons";
 import {reviewsData} from "../../UI/data";
 
 
-const Reviews = () => {
+const Reviews = ({price}) => {
 
     const starsRender = (count) => {
         if (count === 1) {
@@ -43,7 +43,7 @@ const Reviews = () => {
 
     return (
         <div className='reviews'>
-            {reviewsData.map(review => <div className="reviews__wrapper" key={review.id}>
+            {price.map(review => <div className="reviews__wrapper" key={review.id}>
                 <div className="reviews__body">
                     <h4>{review.name}</h4>
                     <div className='reviews-rate'>
@@ -63,7 +63,6 @@ const Reviews = () => {
                     </div>
                 </div>
             </div>)}
-
         </div>
     );
 };
