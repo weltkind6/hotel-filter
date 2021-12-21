@@ -1,9 +1,8 @@
 import React from 'react';
 import './Price.css'
 import {Line} from "../../Icons/Icons";
-export
 
-const Price = () => {
+export const Price = ({setPriceInput}) => {
 
     return (
         <div>
@@ -16,7 +15,7 @@ const Price = () => {
                         placeholder="от 0 ₽"
                         aria-label="Username"
                         aria-describedby="basic-addon1"
-                        onChange={e => console.log(e.target.value)}
+                        onChange={e => setPriceInput(e.target.value)}
                     />
                 </div>
                 <div>

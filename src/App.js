@@ -6,22 +6,29 @@ import {reviewsData} from "./UI/data";
 
 function App() {
 
-    const [priceFilter, setPriceFilter] = useState(reviewsData)
-    const filterByReviewCount = () => {
-        setPriceFilter(([...reviewsData].filter(el => el.count > Number(input))))
+    // Count
+    const [countFilter, setCountFilter] = useState(reviewsData)
+    const [countInput, setCountInput] = useState('')
+    // Price
+    const [priceInput, setPriceInput] = useState('')
+
+
+    const filterHandler = () => {
+        setCountFilter(([...countFilter].filter(el => el.count >= Number(countInput))))
+        setCountFilter([...countFilter].filter(el => el.price >= Number(priceInput)))
     }
 
-    const [input, setInput] = useState('')
 
 
     return (
         <div className="App">
             <Filter
-                filter={filterByReviewCount}
-                setInput={setInput}
+                filter={filterHandler}
+                setCountInput={setCountInput}
+                setPriceInput={setPriceInput}
             />
             <Reviews
-                price={priceFilter}
+                count={countFilter}
             />
         </div>
     );

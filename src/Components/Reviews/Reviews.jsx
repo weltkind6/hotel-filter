@@ -4,7 +4,7 @@ import Star, {StarEmpty} from "../../Icons/Icons";
 import {reviewsData} from "../../UI/data";
 
 
-const Reviews = ({price}) => {
+const Reviews = ({count, priceValue}) => {
 
     const starsRender = (count) => {
         if (count === 1) {
@@ -43,7 +43,7 @@ const Reviews = ({price}) => {
 
     return (
         <div className='reviews'>
-            {price.map(review => <div className="reviews__wrapper" key={review.id}>
+            {count.map(review => <div className="reviews__wrapper" key={review.id}>
                 <div className="reviews__body">
                     <h4>{review.name}</h4>
                     <div className='reviews-rate'>
