@@ -13,6 +13,8 @@ function RangeSlider({val, setVal}) {
                 <Slider
                     value={val}
                     onChange={updateRange}
+                    min={300}
+                    max={5000}
                 />
             </div>
             {" "}

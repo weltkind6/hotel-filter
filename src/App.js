@@ -6,26 +6,19 @@ import RangeSlider from "./UI/RangeSlider";
 import "./App.css";
 
 
-
-
 function App() {
 
     // Count
     const [countFilter, setCountFilter] = useState(reviewsData)
     const [countInput, setCountInput] = useState('')
-    // Price
-    const [priceInput, setPriceInput] = useState('')
-    const [priceInput2, setPriceInput2] = useState('')
 
     // RangeSlider
-    const [val, setVal] = useState([0, 40]);
-
-
+    const [val, setVal] = useState([600, 1500]);
+    // Filter
     const filterHandler = () => {
         setCountFilter([...countFilter]
-            .filter(el => el.price >= Number(priceInput) && el.price < Number(priceInput2) && el.count >= Number(countInput)))
+            .filter(el => el.price >= val[0] && el.price <= 2300 && el.count >= Number(countInput)))
     }
-
 
     return (
         <div className="App">

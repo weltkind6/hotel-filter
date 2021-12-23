@@ -33,7 +33,6 @@ export const Price = ({ val, setVal}) => {
                         //onChange={e => setPriceInput2(e.target.value)}
                         onChange={e => setVal([val[0], e.target.value])}
                     />
-
                 </div>
             </div>
         </div>
