@@ -5,7 +5,7 @@ import ReviewsCount from "./ReviewsCount/ReviewsCount";
 import Price from "./Price/Price";
 
 
-const Filter = ({filter, setCountInput, setPriceInput}) => {
+const Filter = ({filter, setCountInput, val, setVal}) => {
 
 
     return (
@@ -15,7 +15,10 @@ const Filter = ({filter, setCountInput, setPriceInput}) => {
             <ReviewsCount
                 setCountInput={setCountInput}
             />
-            <Price setPriceInput={setPriceInput}/>
+            <Price
+                setVal={setVal}
+                val={val}
+            />
             <button
                 onClick={() => filter()}
                 type="button"

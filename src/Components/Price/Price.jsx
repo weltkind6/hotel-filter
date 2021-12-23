@@ -2,7 +2,7 @@ import React from 'react';
 import './Price.css'
 import {Line} from "../../Icons/Icons";
 
-export const Price = ({setPriceInput}) => {
+export const Price = ({ val, setVal}) => {
 
     return (
         <div>
@@ -10,12 +10,13 @@ export const Price = ({setPriceInput}) => {
             <div className='input-block'>
                 <div className="input-group mb-3">
                     <input
+                        value={val[0]}
                         type="text"
                         className="form-control"
                         placeholder="от 0 ₽"
                         aria-label="Username"
                         aria-describedby="basic-addon1"
-                        onChange={e => setPriceInput(e.target.value)}
+                        onChange={e => setVal([e.target.value, val[1]])}
                     />
                 </div>
                 <div>
@@ -23,13 +24,16 @@ export const Price = ({setPriceInput}) => {
                 </div>
                 <div className="input-group mb-3">
                     <input
+                        value={val[1]}
                         type="text"
                         className="form-control"
                         placeholder="до 1500 ₽"
                         aria-label="Username"
                         aria-describedby="basic-addon1"
-                        onChange={e => console.log(e.target.value)}
+                        //onChange={e => setPriceInput2(e.target.value)}
+                        onChange={e => setVal([val[0], e.target.value])}
                     />
+
                 </div>
             </div>
         </div>
