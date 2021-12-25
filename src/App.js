@@ -1,10 +1,9 @@
-import React, {useState} from 'react'
+import React, {useState, createContext, useContext} from 'react'
 import Reviews from "./Components/Reviews/Reviews";
-import Filter from "./Components/Filter";
+import Filter from "./Components/Filter/Filter";
 import {reviewsData} from "./UI/data";
 import RangeSlider from "./UI/RangeSlider";
 import "./App.css";
-
 
 function App() {
 
@@ -17,12 +16,16 @@ function App() {
     // Filter
     const filterHandler = () => {
         setCountFilter([...countFilter]
-            .filter(el => el.price >= val[0] && el.price <= 2300 && el.count >= Number(countInput)))
+            .filter(el => el.price >= val[0]
+                && el.price <= [val[1]]
+                && el.count >= Number(countInput)
+                && (el.stars >= 5)
+            ))
     }
 
     return (
-        <div className="App">
 
+        <div className="App">
             <Filter
                 filter={filterHandler}
                 setCountInput={setCountInput}

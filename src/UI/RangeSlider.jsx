@@ -3,7 +3,6 @@ import {Slider} from "@material-ui/core";
 
 function RangeSlider({val, setVal}) {
 
-
     const updateRange = (e, data) => {
         setVal(data);
     };

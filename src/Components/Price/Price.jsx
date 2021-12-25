@@ -30,7 +30,6 @@ export const Price = ({ val, setVal}) => {
                         placeholder="до 1500 ₽"
                         aria-label="Username"
                         aria-describedby="basic-addon1"
-                        //onChange={e => setPriceInput2(e.target.value)}
                         onChange={e => setVal([val[0], e.target.value])}
                     />
                 </div>

@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import './Reviews.css'
 import Star, {StarEmpty} from "../../Icons/Icons";
-import {reviewsData} from "../../UI/data";
 
 
-const Reviews = ({count, priceValue}) => {
+
+const Reviews = ({count}) => {
 
     const starsRender = (count) => {
         if (count === 1) {

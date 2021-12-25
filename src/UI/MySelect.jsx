@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { default as ReactSelect } from "react-select";
 
 const MySelect = props => {
+
     if (props.allowSelectAll) {
         return (
             <ReactSelect

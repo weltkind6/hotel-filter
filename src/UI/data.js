@@ -1,9 +1,9 @@
 export const colourOptions = [
-    {value: "one", label: "1 звёзда", color: "#00BB6D"},
-    {value: "two", label: "2 звёзды", color: "#00BB6D"},
-    {value: "three", label: "3 звёзды", color: "#5243AA"},
-    {value: "four", label: "4 звезды", color: "#FF5630"},
-    {value: "five", label: "5 звёзд", color: "#FF8B00"},
+    {id: 1, value: "one", label: "1 звёзда", color: "#00BB6D"},
+    {id: 2, value: "two", label: "2 звёзды", color: "#00BB6D"},
+    {id: 3, value: "three", label: "3 звёзды", color: "#5243AA"},
+    {id: 4, value: "four", label: "4 звезды", color: "#FF5630"},
+    {id: 5, value: "five", label: "5 звёзд", color: "#FF8B00"},
 ];
 
 
@@ -47,6 +47,14 @@ export const reviewsData = [
         count: 12,
         price: 2000,
         body: 'Это прекрасный отель, на его террритории есть басейн, мы о таком и мечтать не могли...!'
+    },
+    {
+        id: 6,
+        name: 'Booker Tee',
+        stars: 5,
+        count: 112,
+        price: 2800,
+        body: 'Отель просто высший. У меня нет слов! Олл иклюзив, ешь-пей пока не надоест'
     },
 
 ]
