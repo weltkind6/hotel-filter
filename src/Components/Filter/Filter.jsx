@@ -7,18 +7,10 @@ import Price from "../Price/Price";
 
 
 
-const Filter = ({filter, setCountInput, val, setVal}) => {
+const Filter = ({filter, setCountInput, val, setVal, setFilteredStart}) => {
 
     const ExampleHandler = example => {
-        if(example.map(i => i.value).includes('one')) {
-            console.log('One here!')
-        }
-        else if(example.map(i => i.value).includes('two')) {
-            console.log('Two here!')
-        }
-
-        console.log('This arr consist of:', example.map(el => el.id))
-
+        setFilteredStart(example.map(el => el.id))
     }
 
     return (

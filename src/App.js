@@ -13,13 +13,15 @@ function App() {
 
     // RangeSlider
     const [val, setVal] = useState([600, 1500]);
+    const [filteredStart, setFilteredStart] = useState('')
+    console.log(filteredStart)
     // Filter
     const filterHandler = () => {
         setCountFilter([...countFilter]
             .filter(el => el.price >= val[0]
                 && el.price <= [val[1]]
                 && el.count >= Number(countInput)
-                && (el.stars >= 5)
+                && filteredStart.includes(el.stars)
             ))
     }
 
@@ -31,6 +33,7 @@ function App() {
                 setCountInput={setCountInput}
                 val={val}
                 setVal={setVal}
+                setFilteredStart={setFilteredStart}
             />
             <RangeSlider
                 val={val}
