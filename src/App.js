@@ -3,6 +3,7 @@ import Reviews from "./Components/Reviews/Reviews";
 import Filter from "./Components/Filter/Filter";
 import {reviewsData} from "./UI/data";
 import RangeSlider from "./UI/RangeSlider";
+import NotFound from "./Components/NotFound/NotFound";
 
 function App() {
 
@@ -16,13 +17,13 @@ function App() {
 
     // Filter
     const filterHandler = () => {
-        setCountFilter([...countFilter]
-            .filter(el => el.price >= val[0]
-                && el.price <= [val[1]]
-                && el.count >= Number(countInput)
-                && filteredStart.includes(el.stars)
-            ))
+        const filtered = [...countFilter].filter(el => el.price >= val[0]
+            && el.price <= [val[1]]
+            && el.count >= Number(countInput)
+            && filteredStart.includes(el.stars))
+        filtered.length > 0 ? setCountFilter(filtered) : setCountFilter([])
     }
+
     const resetFilterHandler = () => {
         setCountFilter(reviewsData)
     }
