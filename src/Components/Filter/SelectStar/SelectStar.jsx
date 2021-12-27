@@ -27,40 +27,9 @@ const MultiValue = props => (
 
 const animatedComponents = makeAnimated();
 
-// export default class Example extends Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             optionSelected: null
-//         };
-//     }
-//
-//     handleChange = selected => {
-//         this.setState({
-//             optionSelected: selected
-//         });
-//     };
-//
-//     render() {
-//
-//         return (
-//             <MySelect
-//                 options={colourOptions}
-//                 isMulti
-//                 closeMenuOnSelect={false}
-//                 hideSelectedOptions={false}
-//                 components={{Option, MultiValue, animatedComponents}}
-//                 onChange={this.handleChange}
-//                 allowSelectAll={true}
-//                 value={this.state.optionSelected}
-//             />
-//         );
-//     }
-// }
 
 const Example = ({exam}) => {
     const [state, setState] = useState({optionSelected: null})
-    // const [selectedValue, setSelectedValue] = useState('')
 
     const handleChange = selected => {
         setState({

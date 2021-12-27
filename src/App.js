@@ -3,7 +3,6 @@ import Reviews from "./Components/Reviews/Reviews";
 import Filter from "./Components/Filter/Filter";
 import {reviewsData} from "./UI/data";
 import RangeSlider from "./UI/RangeSlider";
-import "./App.css";
 
 function App() {
 
