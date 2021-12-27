@@ -5,9 +5,7 @@ import ReviewsCount from "../ReviewsCount/ReviewsCount";
 import Price from "../Price/Price";
 
 
-
-
-const Filter = ({filter, setCountInput, val, setVal, setFilteredStart}) => {
+const Filter = ({filter, setCountInput, val, setVal, setFilteredStart, reset}) => {
 
     const ExampleHandler = example => {
         setFilteredStart(example.map(el => el.id))
@@ -26,12 +24,21 @@ const Filter = ({filter, setCountInput, val, setVal, setFilteredStart}) => {
                 setVal={setVal}
                 val={val}
             />
-            <button
-                onClick={() => filter()}
-                type="button"
-                className="btn btn-primary"
-            >Применить фильтр
-            </button>
+            <div className='buttonsBlock'>
+                    <button
+                        onClick={() => filter()}
+                        type="button"
+                        className="btn btn-primary"
+                    >Применить фильтр
+                    </button>
+
+                   <button
+                       style={{border: '2px solid #EAEAEA'}}
+                       onClick={() => reset()}
+                       type="button"
+                       className="btn">Очистить фильтр
+                   </button>
+            </div>
         </div>
     );
 };

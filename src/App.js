@@ -1,4 +1,4 @@
-import React, {useState, createContext, useContext} from 'react'
+import React, {useState} from 'react'
 import Reviews from "./Components/Reviews/Reviews";
 import Filter from "./Components/Filter/Filter";
 import {reviewsData} from "./UI/data";
@@ -13,7 +13,7 @@ function App() {
     // RangeSlider
     const [val, setVal] = useState([600, 1500]);
     const [filteredStart, setFilteredStart] = useState('')
-    console.log(filteredStart)
+
     // Filter
     const filterHandler = () => {
         setCountFilter([...countFilter]
@@ -22,6 +22,9 @@ function App() {
                 && el.count >= Number(countInput)
                 && filteredStart.includes(el.stars)
             ))
+    }
+    const resetFilterHandler = () => {
+        setCountFilter(reviewsData)
     }
 
     return (
@@ -33,6 +36,7 @@ function App() {
                 val={val}
                 setVal={setVal}
                 setFilteredStart={setFilteredStart}
+                reset={resetFilterHandler}
             />
             <RangeSlider
                 val={val}
