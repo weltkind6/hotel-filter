@@ -10,6 +10,7 @@ function App() {
     // Count
     const [countFilter, setCountFilter] = useState(reviewsData)
     const [countInput, setCountInput] = useState('')
+    const [postFound, setPostFound] = useState(false)
 
     // RangeSlider
     const [val, setVal] = useState([600, 1500]);
@@ -22,6 +23,7 @@ function App() {
             && el.count >= Number(countInput)
             && filteredStart.includes(el.stars))
         filtered.length > 0 ? setCountFilter(filtered) : setCountFilter([])
+        setPostFound(true)
     }
 
     const resetFilterHandler = () => {
@@ -43,9 +45,7 @@ function App() {
                 val={val}
                 setVal={setVal}
             />
-            <Reviews
-                count={countFilter}
-            />
+            {postFound ? <NotFound/> : <Reviews count={countFilter}/>}
         </div>
     );
 }
