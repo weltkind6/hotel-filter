@@ -36,7 +36,7 @@ const Filter = ({filter, setCountInput, val, setVal, setFilteredStart, reset}) =
                        style={{border: '2px solid #EAEAEA'}}
                        onClick={() => reset()}
                        type="button"
-                       className="btn">Очистить фильтр
+                       className="btn resetButton">Очистить фильтр
                    </button>
             </div>
         </div>
